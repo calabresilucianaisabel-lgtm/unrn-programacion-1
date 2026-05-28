@@ -1,0 +1,15 @@
+Ejercicio 1 - Algunas preguntas
+
+1. ¿Por qué es importante validar los datos que ingresa un usuario?
+Es fundamental porque los usuarios pueden equivocarse o ingresar cualquier cosa por teclado. Si el programa espera un número entero para hacer una cuenta y alguien escribe "hola", el código va a tirar un error y se va a cerrar (se rompe). Validar sirve para atajar esos problemas antes de que pasen, asegurar que los datos tengan sentido y que la aplicación sea segura y estable.
+
+2. ¿Qué hace strip y en qué se diferencia de split?
+- strip(): Se encarga de limpiar un texto, borrando todos los espacios en blanco que estén de más al principio y al final. No toca los espacios del medio.
+- split(): Sirve para cortar o dividir una cadena de texto en varias partes usando un separador (como una coma, un espacio, un punto y coma, etc.) y te devuelve una lista con esos pedazos.
+La diferencia es: strip limpia los bordes de un solo texto, mientras que split desarma un texto largo en una lista de varios elementos.
+
+3. ¿Para qué puede servir count cuando una línea tiene datos separados por comas o por punto y coma?
+ Sirve para verificar que la línea tenga la estructura correcta antes de ponernos a procesarla. Por ejemplo, si sabemos que una fila de datos tiene que tener 3 columnas separadas por comas, obligatoriamente tiene que haber exactamente 2 comas. Usando count(",") podemos chequear si están todas las comas, si da más o menos, significa que la línea está mal armada o le faltan datos, y podemos avisar del error antes de que falle el split.
+
+4. ¿Qué problema pueden traer los espacios de más al principio o al final de un dato?
+El problema principal es con las comparaciones y las validaciones. Para Python, "Juan" y "Juan " son dos cosas totalmente distintas. Si querés buscar a "Juan" en una base de datos o verificar una contraseña, no lo va a encontrar. Además, métodos como isnumeric() o isalpha() dan falso si hay un espacio dando vueltas, lo que hace que una validación falle aunque las letras o números estén bien escritos.

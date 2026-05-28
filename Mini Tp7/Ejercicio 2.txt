@@ -1,0 +1,30 @@
+Ejercicio 2 - Leer código y explicarlo
+
+Este ejercicio no es para programar. Lean el codigo y escriban una explicación de que hace.
+
+linea = " mara ; programacion ; 8 "
+
+partes = linea.split(";")
+nombre = partes[0].strip().capitalize()
+materia = partes[1].strip().capitalize()
+nota_texto = partes[2].strip()
+
+if nota_texto.isnumeric():
+    nota = int(nota_texto)
+    print(f"{nombre} cursa {materia} y obtuvo {nota}")
+else:
+    print("La nota no es valida")
+
+Para orientar la explicación:
+
+- ¿Qué queda guardado en partes?
+ Queda una lista con tres elementos de tipo texto, manteniendo todavía los espacios que venían originalmente: [' mara ', ' programacion ', ' 8 '].
+
+- ¿Por qué se usa strip antes de capitalize?
+ Porque capitalize() pasa a mayúscula el primer carácter que encuentra. Si el texto tiene espacios al principio (como " mara "), el primer carácter es un espacio, por lo que intentaría poner en mayúscula el espacio (no hace nada) y la "m" quedaría en minúscula (" mara "). Al usar strip() primero, se borra el espacio, la "m" pasa a ser el primer carácter real y ahí sí se transforma en "M".
+
+- ¿Qué dato se está validando antes de convertirlo?
+ Se está validando la variable "nota_texto" (que en ese punto tiene el string "8", ya sin espacios gracias al strip anterior).
+
+- ¿Qué imprimiría el programa si en lugar de 8 viniera ocho?
+ Imprimiría el mensaje: "La nota no es valida". Esto pasa porque "ocho" isnumeric() da False, por lo tanto el programa salta directo al bloque "else".
