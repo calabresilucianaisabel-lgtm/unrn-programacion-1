@@ -1,0 +1,7 @@
+ Listas: Estructuras de datos modificables que almacenan contenido/elementos, en una sola variable. Podemos almacenar una serie de elementos del mismo tipo bajo una misma variable. Por ejemplo: temperaturas.
+
+ Tuplas: Estructuras de datos que, a diferencia de las listas, almacenan contenido inmutable (o sea, que no se pueden modificar), en una sola variable. Por ejemplo, pueden utilizarse para definir fechas.
+
+ Conjunto: Estructura desordenada (sin orden) de datos que a diferencia de las “tuplas” y “listas”, deben ser únicos (no repetidos) dentro de una misma variable. A diferencia de las “tuplas”, estos datos pueden ser modificables. Puede ser útil, por ejemplo, en casos donde necesitemos una lista de asistencia con nombres/DNI de diferentes individuos.
+
+ Diccionario: Estructura de datos que permite almacenar información en pares de clave: valor. O sea, cada elemento dentro del diccionario se compone de un identificador único (la clave), y su contenido asociado (el valor). Son elementos ordenados, mutables, y sus claves (no necesariamente el valor de estas) deben ser únicas (no repetirse dentro de un mismo diccionario). Son ideales para agrupar atributos de un objeto real, como información de un usuario.
